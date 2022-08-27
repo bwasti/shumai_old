@@ -5,7 +5,7 @@ import {
 
 function arrayArg(arg, type) {
   if (arg.length == 0) {
-    return [0, 0];
+    return [0, BigInt(0)];
   }
   if (arg.constructor === Number) {
     arg = [arg];
@@ -18,7 +18,7 @@ function arrayArg(arg, type) {
   } else {
     throw "unhandled type for array argument"
   }
-  return [ptr(array), array.length];
+  return [ptr(array), BigInt(array.length || 0)];
 }
 
 export {

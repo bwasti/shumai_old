@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 
 python scripts/gen_binding.py ffi > src/ffi/ffi_tensor_ops_gen.ts
 python scripts/gen_binding.py js > src/tensor/tensor_ops_gen.ts
